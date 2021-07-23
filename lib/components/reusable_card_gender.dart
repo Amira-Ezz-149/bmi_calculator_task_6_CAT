@@ -5,16 +5,14 @@ class ReusableCardGender extends StatefulWidget {
 
   final Widget cardChild;
   final Function onPress;
-  // Color selectedBorderColor ;
-  // Color selectedCheckColor ;
-  Color color;
+  final Color color;
 
   @override
   _ReusableCardGenderState createState() => _ReusableCardGenderState();
 }
 
 class _ReusableCardGenderState extends State<ReusableCardGender> {
-  ///Color defaultBorderColor = Color(0xff232333);
+
   @override
   Widget build(BuildContext context) {
     return Stack(

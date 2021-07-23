@@ -171,8 +171,15 @@ class _InputPageState extends State<InputPage> {
                                     print(fieldWeightValue);
                                   });
                                 }),
-                            Text(fieldWeightValue.toString(),
-                                style: kFieldValueStyle),
+                            Row(
+                              crossAxisAlignment:CrossAxisAlignment.baseline ,
+                              textBaseline: TextBaseline.alphabetic,
+                              children: [
+                                Text(fieldWeightValue.toString(),
+                                    style: kFieldValueStyle),
+                                Text('kg', style: kMeasureUnit),
+                              ],
+                            ),
                             RoundedIconButton(
                               icon: Icons.add,
                               onPress: () {
@@ -253,8 +260,15 @@ class _InputPageState extends State<InputPage> {
                                 });
                               },
                             ),
-                            Text(fieldHeightValue.toString(),
-                                style: kFieldValueStyle),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.baseline,
+                              textBaseline: TextBaseline.alphabetic,
+                              children: [
+                                Text(fieldHeightValue.toString(),
+                                    style: kFieldValueStyle),
+                                Text('cm', style: kMeasureUnit,)
+                              ],
+                            ),
                             RoundedIconButton(
                               icon: Icons.add,
                               onPress: () {
